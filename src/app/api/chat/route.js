@@ -15,7 +15,7 @@ export async function POST(req) {
     const chatCompletion = await openai.chat.completions.create({
       model: "meta-llama/llama-3.1-8b-instruct:free",
       messages: [
-        { role: "system", content: `You are an AI assistant named ${botName}. Please incorporate your name naturally into your responses when appropriate.` },
+        { role: "system", content: `You are an AI assistant named ${botName}.` },
         ...conversationHistory,
         { role: "user", content: userMessage }
       ],
